@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Ball</title>
+    <link rel="icon" type="image/png" href="./img/favicon_8ball_180.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_8ball_180.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/8ball.css">
+    
+</head>
+<body class="body-8ball">
+
+    <header class="d-flex-center">
+        <div>Stelle eine Frage</div>
+        <div class="menu-container d-flex-center">
+            <div class="menu"></div>
+        </div>
+    </header>
+
+    <div class="answer-ball-container">
+        <div id="Answer-ball" onclick="decide()">
+            <img class="ball-image" src="img/8-Ball01_empty.png"  title="Schüttel mich">
+            
+            <div id="Triangle" class="triangle d-none">
+                <div id="Answer" class="answer"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer  class="d-flex-center">
+        <div>und schüttel mich</div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/8ball.js"></script>
+
+</body>
+</html>

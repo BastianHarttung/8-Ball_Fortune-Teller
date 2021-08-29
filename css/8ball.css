@@ -1,0 +1,80 @@
+/* 8 Ball */
+.body-8ball{
+    background-image: url('../img/bg-billard02.jpg');
+    background-position: 59% 70%;
+    background-size: cover;   
+    background-repeat: no-repeat;
+}
+.answer-ball-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+}
+#Answer-ball{         
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.triangle{
+    width: 0px;
+    height: 0px;
+    transform:rotate(360deg);
+    border-style: solid;
+    border-width: 0 65px 112.6px 65px;
+    border-color: transparent transparent #0090B9 transparent;
+    position: absolute;
+    top: 103px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    opacity: 0.9;
+}
+#Answer{
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    width: 90px;
+    height: 80px; 
+    position: absolute;
+    top: 39px;
+    text-align: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+.ball-image{
+    width: 350px;
+}
+
+/* Animations */
+.shake{
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.fade-in{
+    animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }to{
+        opacity: 0.9;
+        transform: scale(1);
+    }
+}

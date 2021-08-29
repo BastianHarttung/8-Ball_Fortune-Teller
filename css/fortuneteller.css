@@ -1,0 +1,71 @@
+
+.bg-fortune{
+    background-image: url('../img/bg-fortune.jpg');
+    background-position: 50% 70%;
+    background-size: cover;   
+    background-repeat: no-repeat;
+}
+
+.decision-container{
+    flex-direction: column;    
+}
+.form-decision{
+    flex-direction: column;
+}
+.form-decision input{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;    
+    border: 1px solid var(--mat-black);
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+    outline: none;
+    transition: background-color 200ms ease-in-out;
+}
+.decision-container button{
+    color: white;
+    background-color: var(--turkis);
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 8px;
+    margin: 10px;
+    cursor: pointer;  
+    transition: background-color 200ms ease-in-out;  
+}
+.decision-container button:hover{
+    background-color: var(--turkis-bright);
+}
+.form-input-container{
+    flex-direction: column;
+}
+.fa-times-circle{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* fortune ball */
+.section-fortune{
+    position: relative;
+}
+.fa-undo-alt{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    cursor: pointer;
+}
+.fortune-ball-parent-container{
+    flex-direction: column;
+    
+}
+.fortune-ball-container img{
+    height: 350px;    
+}
+.answer{
+    /* color: var(--mat-black); */
+    font-size: 40px;   
+    position: absolute;  
+    margin: 20px;  
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}

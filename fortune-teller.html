@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/91e28ba968.js" crossorigin="anonymous"></script>
+    
+    <title>Fortune-Teller</title>
+    <link rel="icon" type="image/png" href="./img/favicon_8ball_180.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_8ball_180.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fortuneteller.css">
+    
+</head>
+<body class="bg-fortune">
+
+    <header class="d-flex-center">
+        <div>Berühre die Kugel</div>
+        <div class="menu-container d-flex-center">
+            <div class="menu"></div>
+        </div>
+    </header>
+
+    <section class="section-fortune d-flex-center">
+        <div id="decision-container" class="decision-container d-flex-center">
+            <div class="form-decision d-flex-center">
+                <div id="form-input-container-first" class="form-input-container d-flex-center">
+                    <input type="text" name="decision1" id="decision1" size="40" placeholder="1. Entscheidungsmöglichkeit*" required>
+                    <input type="text" name="decision2" id="decision2" size="40" placeholder="2. Entscheidungsmöglichkeit*" required>
+                </div>  
+                <div id="form-input-container" class="form-input-container d-flex-center">
+
+                </div>        
+            </div>
+            <button onclick="anotherInputField()">Weitere Entscheidungsmöglichkeit</button>
+            <button onclick="startFortune()">Zeige Wahrsagekugel</button>
+        </div>
+        <div id="fortune-ball-parent-container" class="fortune-ball-parent-container d-flex-center d-none">
+            <i class="fas fa-undo-alt fa-2x" onclick="backToDecisions()"></i>
+            <div class="fortune-ball-container d-flex-center">
+                <img src="./img/glass-ball.png" title="Berühre mich">
+                <div id="fortune-answer" class="answer d-flex-center"></div>
+            </div>    
+               
+        </div>
+    </section>   
+
+    <footer  class="d-flex-center">
+        <div>und sie hilft dir bei der Entscheidung</div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/fortune-teller.js"></script>
+
+</body>
+</html>
