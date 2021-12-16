@@ -46,6 +46,14 @@
     flex-direction: column;
 }
 
+.decision-input {
+    width: 350px;
+}
+
+.another-decision-input {
+    width: 310px;
+}
+
 .fa-times-circle {
     margin-left: 5px;
     cursor: pointer;
@@ -99,5 +107,15 @@
     to {
         opacity: 0.9;
         transform: scale(1);
+    }
+}
+
+@media (max-width: 500px) {
+    .decision-input {
+        width: 270px;
+    }
+
+    .another-decision-input {
+        width: 230px;
     }
 }

@@ -10,7 +10,7 @@ function anotherInputField() {
     nrDecisions++;
     document.getElementById('form-input-container').innerHTML += `
         <div id="decision${nrDecisions}-container" class="d-flex-center">
-            <input type="text" name="decision${nrDecisions}" id="decision${nrDecisions}" size="26" placeholder="Weitere Entscheidungsmöglichkeit">
+            <input type="text" name="decision${nrDecisions}" id="decision${nrDecisions}" class="another-decision-input" placeholder="Weitere Entscheidungsmöglichkeit">
             <i class="far fa-times-circle fa-2x" onclick="deleteInputField(${nrDecisions})"></i>
         </div>
         `

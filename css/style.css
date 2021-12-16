@@ -30,9 +30,9 @@ body {
 
 footer {
     background-color: var(--turkis);
-    height: 70px;
     font-size: 28px;
     text-align: center;
+    padding: 20px 10px;
 }
 
 header {
@@ -41,6 +41,18 @@ header {
 
 footer {
     border-radius: 10px 10px 0px 0px;
+}
+
+.head-container {
+    background-color: var(--turkis);
+    width: 100vw;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    align-items: flex-start !important;
+    padding: 20px 10px;
+    z-index: 2;
 }
 
 /*----------------Menü-------------------------*/
@@ -86,23 +98,12 @@ footer {
     bottom: -8px;
 }
 
-.head-container {
-    background-color: var(--turkis);
-    width: 100vw;
-    font-size: 28px;
-    text-align: center;
-    border-radius: 0px 0px 10px 10px;
-    position: relative;
-    align-items: flex-start !important;
-    padding: 20px 0px;
-    z-index: 2;
-}
 
 /*-----------Navigation----------*/
 .nav {
     background-color: var(--turkis-bright);
     position: absolute;
-    top: -10px;
+    top: -15px;
     width: 100vw;
     height: 80px;
     display: flex;
@@ -122,6 +123,7 @@ footer {
     text-decoration: none;
     margin: 10px;
 }
+
 .nav a:hover {
     text-decoration: underline;
 }
@@ -130,6 +132,24 @@ footer {
 @media (min-width: 760px) {
     body {
         min-height: 100vh;
+    }
+}
+
+@media (max-width: 500px) {
+    footer {
+        font-size: 23px;
+    }
+
+    .head-container {
+        font-size: 23px;
+    }
+
+    .nav-active {
+        top: 58px;
+    }
+
+    .nav a {
+        font-size: 20px;
     }
 }
 
