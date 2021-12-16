@@ -11,56 +11,38 @@ let answers = [
     'Nicht drauf wetten'
 ]
 
-let answerDiv = document.getElementById('Answer');
-let triangleDiv = document.getElementById('Triangle');
+const answerDiv = document.getElementById('Answer');
+const triangleDiv = document.getElementById('Triangle');
 
-function decide(){
-    let randomNr = Math.floor(Math.random() * answers.length);    
+/**
+ * Shake Ball and make Decision
+ */
+function decide() {
+    let randomNr = Math.round(Math.random() * (answers.length -1));
 
     answerDiv.innerHTML = '';
     triangleDiv.classList.add('d-none');
     /* shake ball */
-    document.getElementById('Answer-ball').classList.add('shake');   
-    
-    setTimeout(function(){
-        
-        if(randomNr == 0){
-           answer(0) 
-        }else if(randomNr == 1){
-            answer(1)
-        }else if(randomNr == 2){
-            answer(2)
-        }else if(randomNr == 3){
-            answer(3)
-        }else if(randomNr == 4){
-            answer(4)
-        }else if(randomNr == 5){
-            answer(5)
-        }else if(randomNr == 6){
-            answer(6)
-        }else if(randomNr == 7){
-            answer(7)
-        }else if(randomNr == 8){
-            answer(8)
-        }else if(randomNr == 9){
-            answer(9)
-        }else {
-            answer(0)
-        }
-        
-    },1000);    
+    document.getElementById('Answer-ball').classList.add('shake');
 
-    setTimeout(function() {
-        document.getElementById('Answer-ball').classList.remove('shake')   
+    setTimeout(function () {
+        answer(randomNr)
+    }, 1000);
+
+    setTimeout(function () {
+        document.getElementById('Answer-ball').classList.remove('shake')
     }, 1001);
 }
 
-function answer(arrayNr){
-        triangleDiv.classList.remove('d-none');
-        triangleDiv.classList.add('fade-in'); 
-        answerDiv.innerHTML = answers[arrayNr]; 
-        setTimeout(function(){
-            triangleDiv.classList.remove('fade-in'); 
-        },300)                   
-    
+/**
+ * Show Triangle and answer on 8-Ball
+ * @param {number} arrayNr
+ */
+function answer(arrayNr) {
+    triangleDiv.classList.remove('d-none');
+    triangleDiv.classList.add('fade-in');
+    answerDiv.innerHTML = answers[arrayNr];
+    setTimeout(function () {
+        triangleDiv.classList.remove('fade-in');
+    }, 300)
 }

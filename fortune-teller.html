@@ -6,53 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/91e28ba968.js" crossorigin="anonymous"></script>
-    
+
     <title>Fortune-Teller</title>
     <link rel="icon" type="image/png" href="./img/favicon_8ball_180.png" sizes="96x96">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_8ball_180.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fortuneteller.css">
-    
+
 </head>
 <body class="bg-fortune">
 
-    <header class="d-flex-center">
-        <div>Berühre die Kugel</div>
-        <div class="menu-container d-flex-center">
+<header id="header" class="d-flex-center">
+
+    <div id="head" class="head-container d-flex-center">
+        <div>Triff eine Wahl</div>
+        <div class="menu-container d-flex-center" onclick="openMenu()">
             <div class="menu"></div>
         </div>
-    </header>
+    </div>
 
-    <section class="section-fortune d-flex-center">
-        <div id="decision-container" class="decision-container d-flex-center">
-            <div class="form-decision d-flex-center">
-                <div id="form-input-container-first" class="form-input-container d-flex-center">
-                    <input type="text" name="decision1" id="decision1" size="40" placeholder="1. Entscheidungsmöglichkeit*" required>
-                    <input type="text" name="decision2" id="decision2" size="40" placeholder="2. Entscheidungsmöglichkeit*" required>
-                </div>  
-                <div id="form-input-container" class="form-input-container d-flex-center">
+    <nav id="nav" class="nav">
+        <a href="./index.html">Start</a>
+        <a href="./8ball.html">8-Ball</a>
+        <a href="./fortune-teller.html">Wahrsagekugel</a>
+    </nav>
 
-                </div>        
+</header>
+
+<section class="section-fortune d-flex-center">
+    <div id="decision-container" class="decision-container d-flex-center">
+        <div class="form-decision d-flex-center">
+            <div id="form-input-container-first" class="form-input-container d-flex-center">
+                <input type="text" name="decision1" id="decision1" size="30" placeholder="1. Entscheidungsmöglichkeit*"
+                       required>
+                <input type="text" name="decision2" id="decision2" size="30" placeholder="2. Entscheidungsmöglichkeit*"
+                       required>
             </div>
-            <button onclick="anotherInputField()">Weitere Entscheidungsmöglichkeit</button>
-            <button onclick="startFortune()">Zeige Wahrsagekugel</button>
-        </div>
-        <div id="fortune-ball-parent-container" class="fortune-ball-parent-container d-flex-center d-none">
-            <i class="fas fa-undo-alt fa-2x" onclick="backToDecisions()"></i>
-            <div class="fortune-ball-container d-flex-center">
-                <img src="./img/glass-ball.png" title="Berühre mich">
-                <div id="fortune-answer" class="answer d-flex-center"></div>
-            </div>    
-               
-        </div>
-    </section>   
+            <div id="form-input-container" class="form-input-container d-flex-center">
 
-    <footer  class="d-flex-center">
-        <div>und sie hilft dir bei der Entscheidung</div>
-    </footer>
+            </div>
+        </div>
+        <button onclick="anotherInputField()">Weitere Entscheidungsmöglichkeit</button>
+        <button onclick="startFortune()">Zeige Wahrsagekugel</button>
+    </div>
+    <div id="fortune-ball-parent-container" class="fortune-ball-parent-container d-flex-center d-none">
 
-    <script src="./js/script.js"></script>
-    <script src="./js/fortune-teller.js"></script>
+        <i class="fas fa-undo-alt fa-2x" onclick="backToDecisions()"></i>
+
+        <div class="fortune-ball-container d-flex-center" onclick="makeDecision()">
+            <img src="./img/glass-ball.png" title="Berühre mich">
+            <div id="fortune-answer" class="answer d-flex-center"></div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="d-flex-center">
+    <div>und sie hilft dir bei der Entscheidung</div>
+</footer>
+
+<script src="./js/script.js"></script>
+<script src="./js/fortune-teller.js"></script>
 
 </body>
 </html>

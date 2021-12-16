@@ -1,20 +1,22 @@
 
-.bg-fortune{
+.bg-fortune {
     background-image: url('../img/bg-fortune.jpg');
     background-position: 50% 70%;
-    background-size: cover;   
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-.decision-container{
-    flex-direction: column;    
-}
-.form-decision{
+.decision-container {
     flex-direction: column;
 }
-.form-decision input{
+
+.form-decision {
+    flex-direction: column;
+}
+
+.form-decision input {
     background-color: rgba(255, 255, 255, 0.8);
-    font-size: 20px;    
+    font-size: 20px;
     border: 1px solid var(--mat-black);
     border-radius: 10px;
     padding: 8px;
@@ -22,7 +24,8 @@
     outline: none;
     transition: background-color 200ms ease-in-out;
 }
-.decision-container button{
+
+.decision-container button {
     color: white;
     background-color: var(--turkis);
     font-size: 17px;
@@ -31,41 +34,70 @@
     text-align: center;
     padding: 8px;
     margin: 10px;
-    cursor: pointer;  
-    transition: background-color 200ms ease-in-out;  
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
 }
-.decision-container button:hover{
+
+.decision-container button:hover {
     background-color: var(--turkis-bright);
 }
-.form-input-container{
+
+.form-input-container {
     flex-direction: column;
 }
-.fa-times-circle{
+
+.fa-times-circle {
     margin-left: 5px;
     cursor: pointer;
 }
 
 /* fortune ball */
-.section-fortune{
+.section-fortune {
     position: relative;
 }
-.fa-undo-alt{
+
+.fa-undo-alt {
     position: absolute;
     top: 0;
     left: 5%;
     cursor: pointer;
+    filter: drop-shadow(0px 0px 5px black);
 }
-.fortune-ball-parent-container{
+
+.fortune-ball-parent-container {
     flex-direction: column;
-    
 }
-.fortune-ball-container img{
-    height: 350px;    
+
+.fortune-ball-container {
+    cursor: pointer;
 }
-.answer{
-    /* color: var(--mat-black); */
-    font-size: 40px;   
-    position: absolute;  
-    margin: 20px;  
+
+.fortune-ball-container img {
+    height: 350px;
+}
+
+.answer {
+    max-width: 200px;
+    font-size: 35px;
+    text-align: center;
+    word-break: break-all;
+    word-wrap: break-word;
+    position: absolute;
+    margin: 20px;
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.fade-in {
+    animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0.9;
+        transform: scale(1);
+    }
 }
