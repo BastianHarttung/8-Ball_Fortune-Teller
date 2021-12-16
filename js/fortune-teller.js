@@ -23,7 +23,6 @@ function anotherInputField() {
  */
 function deleteInputField(position) {
     console.log('Inputfield ' + position + ' löschen')
-    //nrDecisions--;
     document.getElementById('decision' + position + '-container').remove();
 };
 
@@ -67,7 +66,8 @@ function backToDecisions() {
 function showFortuneBall() {
     console.log('starte kugel');
     document.getElementById('decision-container').classList.add('d-none');
-    document.getElementById('fortune-ball-parent-container').classList.remove('d-none')
+    document.getElementById('fortune-answer').innerHTML = '';
+    document.getElementById('fortune-ball-parent-container').classList.remove('d-none');
 }
 
 /**

@@ -11,7 +11,7 @@ body {
 
 :root {
     --turkis: #0090b9;
-    --turkis-bright: #38cdf7;
+    --turkis-bright: #74c6da;
     --mat-black: rgb(48, 48, 48);
 }
 
@@ -113,7 +113,7 @@ footer {
 }
 
 .nav-active {
-    top: 59px;
+    top: 65px;
 }
 
 .nav a {
